@@ -1,0 +1,35 @@
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(50, 49, 49);
+}
+
+li {
+    display: inline-block;   
+}
+li a {
+    color: rgb(255, 255, 255);
+    text-decoration: none; 
+    padding: 20px 30px; 
+    display: block;
+    
+}
+li a:hover{
+    background-color:rgb(29, 133, 244);
+}
+h1{
+    color: rgb(146, 40, 40);
+}
+h2{
+    color: rgb(29, 133, 244);
+}
+
+.left{
+    float: left;
+    padding-right: 20px;
+}
+
+.clearB{
+    clear: both;
+}
