@@ -3,5 +3,6 @@
             <li><a href="index.php">Acceuil</a></li>
             <li><a href="Personnage.php">Personnage</a></li> 
             <li><a href="Fruit.php">Fruit</a></li> 
+            <li><a href="Basket.php">Basket</a></li> 
         </ul>
     </nav>

@@ -1,0 +1,30 @@
+<?php
+     require_once "common/header.php";
+     require_once "common/menu.php";
+     require_once "Class/BasketClass.php";
+     require_once "Class/FruitClass.php";
+?>
+<h1>Fruits Basket</h1>
+<h2>the contents of the basket</h2>
+
+<?php
+      $apple1 = new Fruit(Fruit::APPLE, 5);
+      $apple2 = new Fruit(Fruit::APPLE, 12);
+      
+      $pear1 = new Fruit(Fruit::PEAR, 3);
+      
+      $orange1 = new Fruit(Fruit::ORANGE, 10);
+  
+      $grapes1 = new Fruit(Fruit::GRAPES, 5);
+      $grapes2 = new Fruit(Fruit::GRAPES, 6);
+
+      $basket1 = new Basket($apple1);
+      $basket1 = new Basket($apple2);
+
+      echo $basket1;
+
+
+?>
+
+
+<?php require_once "common/footer.php";?>

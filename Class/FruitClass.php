@@ -4,6 +4,7 @@
         private float $_weight;
         private $_image;
         private $_price;
+        private $_basketId;
         private static $fruits = []; 
         // define basic name and price 
         const APPLE = "Apple";
@@ -29,8 +30,8 @@
         public function getWeight(){return $this->_weight;}
 
          //define the price of fruit in relation to the name and weight  
-        private function getPrice($name){
-            switch($name){
+        public function getPrice(){
+            switch($this->_name){
                 case self::APPLE :
                     $this->_price = self::APPLE_PRICE * $this->_weight;
                     return $this->_price;
@@ -54,8 +55,8 @@
         }
 
          //define the image of fruit in relation to the name and weight  
-        private function getImage($name){
-            switch($name){
+        public function getImage(){
+            switch($this->_name){
                 case self::APPLE :
                     return $this->_image = "imgs/apple.jpg";
                 

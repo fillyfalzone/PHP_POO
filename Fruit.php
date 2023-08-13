@@ -25,6 +25,7 @@
     //loop to show all fruits 
     foreach($listFruits as $fruit){
         echo $fruit; 
+        echo "<br> ---------------------------<br>";
     }
 ?> 
 
