@@ -28,8 +28,14 @@
       $basket2->addFruit($orange2);
       $basket2->addFruit($apple2);
 
+      $basket3 = new Basket();
+      $basket3->addFruit($orange1);
+      $basket3->addFruit($apple2);
+      $basket3->addFruit($grapes2);
+
       echo $basket1;
       echo $basket2;
+      echo $basket3;
 ?>
 
 
