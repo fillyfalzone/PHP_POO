@@ -1,11 +1,13 @@
 <?php
     Class Fruit {
+        private int $_fruitId;
         private string $_name;
         private float $_weight;
         private $_image;
         private $_price;
         private $_basketId;
         private static $fruits = []; 
+        private static $nextFruitId = 1;
         // define basic name and price 
         const APPLE = "Apple";
         const PEAR = "Pear";
@@ -22,12 +24,15 @@
             $this->_weight = $weight;
             $this->_image = $this->getImage($name); // Image and price in relation of constants 
             $this->_price = $this->getPrice($name);
-            self::$fruits[] = $this; 
+            self::$fruits[] = $this; // put all properties in static array property
+            $this->_fruitId = self::$nextFruitId; 
+            self::$nextFruitId++; 
         }
 
         //Getters
         public function getName(){return $this->_name;}
         public function getWeight(){return $this->_weight;}
+        public function getFruitId(){return $this->_fruitId;}
 
          //define the price of fruit in relation to the name and weight  
         public function getPrice(){
@@ -76,8 +81,10 @@
         }
 
         public static function  showFruits(){
-            return self::$fruits;
+            return self::$fruits; 
         }
+
+        
 
         
         //Setters
@@ -88,6 +95,7 @@
         // method to display fruit's informations
         public function __toString(){
             $show = '<img src="'.$this->_image.'" alt="'. $this->_name .'" width="100px"><br>';
+            $show .= "Fruit n° : ". $this->_fruitId. "<br>";
             $show .= "Name : ". $this->_name. "<br>";
             $show .= "Weight : ". $this->_weight. " kg<br>";
             $show .= "Price : ". $this->_price. " €<br>";

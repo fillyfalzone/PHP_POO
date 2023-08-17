@@ -14,7 +14,7 @@ require_once "FruitClass.php";
         }
 
         public function getArticles(){ return $this->_articles;}
-        public function getbasketID(){return $this->_basketID;}
+        public function getbasketId(){return $this->_basketID;}
         public function getBasketWeight(){return $this->_basketWeight;}
         public function getBasketPrice(){return $this->_basketPrice;}
 
